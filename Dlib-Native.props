@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+	
+	<ItemGroup>
+		<PropertyPageSchema Include="$(MSBuildThisFileDirectory)Dlib-Native.defs.xml" />
+	</ItemGroup>
+	<!--<ItemDefinitionGroup>
+		<PreBuildEvent>
+			<Command>echo VCTargetsPath=$(VCTargetsPath)</Command>
+		</PreBuildEvent>
+	</ItemDefinitionGroup>-->
+
+</Project>

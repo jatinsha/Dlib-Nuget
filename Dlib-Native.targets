@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+	<PropertyGroup Condition="'$(Configuration)' != 'Debug'">
+		<ConfigurationType>Release</ConfigurationType>
+		<ConfigExt>release</ConfigExt>
+	</PropertyGroup>
+  
+	<PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <ConfigurationType>Debug</ConfigurationType>
+		<ConfigExt>debug</ConfigExt>
+	</PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Platform)' == 'x64'">
+    <PlatformExt>64bit</PlatformExt>
+  </PropertyGroup>
+  
+  <PropertyGroup Condition="'$(Platform)' == 'x86'">
+    <PlatformExt>32bit</PlatformExt>
+  </PropertyGroup>
+  
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\runtimes\native\$(Platform)-$(ConfigurationType)\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ClCompile>
+
+		<Link>
+			<AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\runtimes\native\$(Platform)-$(ConfigurationType)\lib\dlib19.22.0_$(ConfigExt)_$(PlatformExt)_msvc1900.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+
+</Project>

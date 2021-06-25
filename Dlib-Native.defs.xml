@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectSchemaDefinitions xmlns="clr-namespace:Microsoft.Build.Framework.XamlTypes;assembly=Microsoft.Build.Framework">
+	<Rule Name="ReferencedPackages-dlib" PageTemplate="tool" DisplayName="Referenced Packages" SwitchPrefix="/" Order="1">
+		<Rule.Categories>
+			<Category Name="dlib" DisplayName="Dlib-Native" />
+		</Rule.Categories>
+		<Rule.DataSource>
+			<DataSource Persistence="ProjectFile" ItemType="" />
+		</Rule.DataSource>
+	</Rule>
+</ProjectSchemaDefinitions>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>Dlib-Native</id>
+        <version>19.22.0.1</version>
+        <description>Dlib nuget bindings for C/C++. Supports x86, x64 and arm platforms.</description>
+        <tags>Native, native</tags>
+        <authors> Jatin Sharma </authors>
+    </metadata>
+     
+    <files>
+      <!-- Move general files -->
+      <file src="README.md*" target=""/>
+      <file src="LICENSE*" target=""/>
+      
+      <!-- Move the build files such as include folder, props and targets -->
+      <file src="*.defs.xml" target="build\native"/>
+      <file src="*.props" target="build\native"/>
+      <file src="*.targets" target="build\native"/>
+      
+      <!-- Move the runtime files .lib, .dll and .pdb -->
+      <file src="dlib\out\install\**\*.*" exclude="**/*.exe;**/cmake/**;**/pkgconfig/**;" target="runtimes\native"/>
+    </files>
+</package>
